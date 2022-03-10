@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Lab4.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+		Width="450" Height="450"
+		
+        x:Class="Lab4.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Lab4">
+
+	<Grid ColumnDefinitions="*, *, *, *" RowDefinitions="0.8*, *, *, *">
+		
+		<TextBox Name="Text"   Text="{Binding DisplayText}" Grid.ColumnSpan="4" Focusable="False" IsUndoEnabled="False" FontSize="66" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"></TextBox>
+		
+		<Button Name="But_I"   Command="{Binding TakeLetters}" CommandParameter="I" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">I</Button>
+		<Button Name="But_L"   Command="{Binding TakeLetters}" CommandParameter="L" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">L</Button>
+		<Button Name="But_M"   Command="{Binding TakeLetters}" CommandParameter="M" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">M</Button>
+		<Button Name="But_Mul" Command="{Binding TakeOperations}" CommandParameter="*" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">*</Button>
+
+		<Button Name="But_V"   Command="{Binding TakeLetters}" CommandParameter="V" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">V</Button>
+		<Button Name="But_C"   Command="{Binding TakeLetters}" CommandParameter="C" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">C</Button>
+		<Button Name="But_Add" Command="{Binding TakeOperations}" CommandParameter="+" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">+</Button>
+		<Button Name="But_Div" Command="{Binding TakeOperations}" CommandParameter="/" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">/</Button>
+
+		<Button Name="But_X"   Command="{Binding TakeLetters}" CommandParameter="X" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">X</Button>
+		<Button Name="But_D"   Command="{Binding TakeLetters}" CommandParameter="D" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">D</Button>
+		<Button Name="But_Sub" Command="{Binding TakeOperations}" CommandParameter="-" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">-</Button>
+		<Button Name="But_Eq"  Command="{Binding TakeEqual}" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36">=</Button>
+		
+	</Grid>
+
+</Window>
